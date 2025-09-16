@@ -4,18 +4,18 @@ import Menubar from "@/components/layout/menubar";
 export default function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
         {/* Layout UI */}
         {/* Place children where you want to render a page or nested layout */}
-        <header className="px-24 py-4">
-          <Menubar/>
+        <header className="px-24 py-5">
+          <Menubar />
         </header>
-        <main>{children}</main>
+        <main className="px-24 py-5">{children}</main>
       </body>
     </html>
-  )
+  );
 }

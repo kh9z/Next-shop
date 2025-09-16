@@ -2,6 +2,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+// import {
+//   Menubar,
+//   MenubarContent,
+//   MenubarItem,
+//   MenubarMenu,
+//   MenubarSeparator,
+//   MenubarShortcut,
+//   MenubarTrigger,
+// } from "@/components/ui/menubar";
 
 export default function Menubar() {
   return (
@@ -15,9 +30,36 @@ export default function Menubar() {
           Search
         </Button>
       </div>
-      <Avatar className="col-span-1">
-        <AvatarImage src="https://github.com/shadcn.png" />
-      </Avatar>
+      <div className="col-span-1">
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" />
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Basket</DropdownMenuItem>
+            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem>Logout</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        {/* <Menubar>
+          <MenubarMenu>
+            <MenubarTrigger>
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" />
+              </Avatar>
+            </MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>Profile</MenubarItem>
+              <MenubarItem>Basket</MenubarItem>
+              <MenubarItem>Settings</MenubarItem>
+              <MenubarItem>Logout</MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+        </Menubar> */}
+      </div>
     </div>
   );
 }

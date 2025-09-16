@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Menubar from "@/components/layout/menubar";
 
@@ -13,7 +11,7 @@ export default function DashboardLayout({
       <body>
         {/* Layout UI */}
         {/* Place children where you want to render a page or nested layout */}
-        <header>
+        <header className="px-24 py-4">
           <Menubar/>
         </header>
         <main>{children}</main>
